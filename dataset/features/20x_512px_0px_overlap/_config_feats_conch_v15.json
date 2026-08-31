@@ -1,0 +1,28 @@
+{
+    "job_dir": "../dataset/features",
+    "wsi_source": "../dataset/wsi",
+    "wsi_ext": [
+        ".png",
+        ".jpeg",
+        ".jpg",
+        ".ndpi",
+        ".svs",
+        ".tif",
+        ".mrxs",
+        ".vms",
+        ".dcm",
+        ".vmu",
+        ".scn",
+        ".tiff",
+        ".sdpc",
+        ".zarr",
+        ".czi"
+    ],
+    "skip_errors": false,
+    "target_magnification": 20.0,
+    "coords_dir": "20x_512px_0px_overlap",
+    "device": "cuda:1",
+    "saveas": "h5",
+    "batch_limit": 64,
+    "saveto": "20x_512px_0px_overlap/features_conch_v15"
+}

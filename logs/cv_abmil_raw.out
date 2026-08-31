@@ -1,0 +1,11 @@
+config abmil_raw  {'kind': 'abmil', 'standardize': False, 'lr': 0.001, 'reg': 0.0001}
+교차검증 대상 818장, 화합물 85종 (test 202장은 제외)
+  fold별 슬라이드/화합물: f0=164/17, f1=164/17, f2=164/17, f3=164/17, f4=162/17
+  fold 0  eval 164장  AUC 0.5501  (best epoch 23)
+  fold 1  eval 164장  AUC 0.6532  (best epoch 10)
+  fold 2  eval 164장  AUC 0.5393  (best epoch 9)
+  fold 3  eval 164장  AUC 0.5938  (best epoch 13)
+  fold 4  eval 162장  AUC 0.6525  (best epoch 34)
+
+abmil_raw  전체 818장  AUC 0.5931  95% 구간 [0.554, 0.631]  폭 0.077
+기록: /atlantic_data/shj21/ABMIL/logs/cv_abmil_raw.json

@@ -1,0 +1,12 @@
+config meanpool_lr  {'kind': 'lr', 'standardize': True}
+fold 기준 pair_id  (409개 묶음)
+교차검증 대상 818장, 화합물 85종 (test 202장은 제외)
+  fold별 슬라이드/화합물: f0=164/63, f1=164/64, f2=164/64, f3=164/62, f4=162/62
+  fold 0  eval 164장  AUC 0.6276  (best epoch 0)
+  fold 1  eval 164장  AUC 0.6429  (best epoch 0)
+  fold 2  eval 164장  AUC 0.6835  (best epoch 0)
+  fold 3  eval 164장  AUC 0.6328  (best epoch 0)
+  fold 4  eval 162장  AUC 0.6656  (best epoch 0)
+
+meanpool_lr  전체 818장  AUC 0.6515  95% 구간 [0.614, 0.688]  폭 0.074
+기록: /atlantic_data/shj21/ABMIL/logs/cv_meanpool_lr_pair.json

@@ -1,0 +1,29 @@
+{
+  "run_name": "std_wd1e-1",
+  "args": {
+    "model": "attention",
+    "attn_dim": 128,
+    "epochs": 200,
+    "lr": 0.0005,
+    "reg": 0.1,
+    "optimizer": "adam",
+    "patience": 20,
+    "standardize": true,
+    "skip_test": true,
+    "min_delta": 0.0,
+    "seed": 42,
+    "num_workers": 4,
+    "device": "cuda:1",
+    "run_name": "std_wd1e-1"
+  },
+  "best_epoch": 1,
+  "best_val": {
+    "loss": 0.6682602488347944,
+    "acc": 0.5566037735849056,
+    "auc": 0.6059095763616945
+  },
+  "best_auc_epoch": 8,
+  "best_val_auc": 0.6245995016019936,
+  "test": null,
+  "finished_at": "2026-08-06T19:46:19"
+}

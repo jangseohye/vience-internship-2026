@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "dimensions": [
+      29879,
+      31512
+    ],
+    "level_count": 3,
+    "mag": 20,
+    "mpp": 0.4962
+  },
+  "resume": {
+    "last_status": "completed",
+    "last_task": "patch_features:conch_v15",
+    "last_updated_at": "2026-08-05T02:04:12+0900"
+  },
+  "schema_version": 2,
+  "slide": {
+    "abs_path": "/atlantic_data/shj21/ABMIL/dataset/wsi/normal/59170.svs",
+    "ext": ".svs",
+    "id": "59170.svs__5f60b76789de",
+    "name": "59170",
+    "reader_type": "OpenSlideWSI",
+    "rel_path": null
+  },
+  "summary": {
+    "coords": "completed",
+    "patch_features": {
+      "conch_v15": "completed"
+    },
+    "segmentation": "completed"
+  },
+  "tasks": {
+    "coords": {
+      "_active_attempt_id": null,
+      "attempts": [
+        {
+          "attempt_id": "050fb6447105",
+          "duration_s": 0.5615875720977783,
+          "error": null,
+          "finished_at": "2026-08-04T21:31:28+0900",
+          "finished_epoch": 1785846688.2026958,
+          "result": "completed",
+          "started_at": "2026-08-04T21:31:27+0900",
+          "started_epoch": 1785846687.6411083
+        }
+      ],
+      "message": "Patch coords generated.",
+      "outputs": {
+        "coords_h5": {
+          "bytes": 169200,
+          "exists": true,
+          "path": "../dataset/features/20x_512px_0px_overlap/patches/59170_patches.h5"
+        },
+        "coords_viz": {
+          "bytes": 211347,
+          "exists": true,
+          "path": "../dataset/features/20x_512px_0px_overlap/visualization/59170.jpg"
+        }
+      },
+      "reason": null,
+      "status": "completed"
+    },
+    "patch_features:conch_v15": {
+      "_active_attempt_id": null,
+      "attempts": [
+        {
+          "attempt_id": "53d1f1f0313a",
+          "duration_s": 25.942111492156982,
+          "error": null,
+          "finished_at": "2026-08-05T02:04:11+0900",
+          "finished_epoch": 1785863051.9944594,
+          "result": "completed",
+          "started_at": "2026-08-05T02:03:46+0900",
+          "started_epoch": 1785863026.052348
+        }
+      ],
+      "message": "Patch features extracted.",
+      "outputs": {
+        "coords_path": {
+          "bytes": 169200,
+          "exists": true,
+          "path": "../dataset/features/20x_512px_0px_overlap/patches/59170_patches.h5"
+        },
+        "features_path": {
+          "bytes": 8092056,
+          "exists": true,
+          "path": "../dataset/features/20x_512px_0px_overlap/features_conch_v15/59170.h5"
+        }
+      },
+      "reason": null,
+      "status": "completed"
+    },
+    "segmentation": {
+      "_active_attempt_id": null,
+      "attempts": [
+        {
+          "attempt_id": "30c4174ee0bc",
+          "duration_s": 13.381671667098999,
+          "error": null,
+          "finished_at": "2026-08-04T21:00:53+0900",
+          "finished_epoch": 1785844853.4937606,
+          "result": "completed",
+          "started_at": "2026-08-04T21:00:40+0900",
+          "started_epoch": 1785844840.112089
+        }
+      ],
+      "message": "Tissue segmented.",
+      "outputs": {
+        "contour_geojson": {
+          "bytes": 1331084,
+          "exists": true,
+          "path": "../dataset/features/contours_geojson/59170.geojson"
+        },
+        "contour_jpg": {
+          "bytes": 297643,
+          "exists": true,
+          "path": "../dataset/features/contours/59170.jpg"
+        }
+      },
+      "reason": null,
+      "status": "completed"
+    }
+  },
+  "trident_version": "0.3.0",
+  "updated_at": "2026-08-05T02:04:12+0900"
+}

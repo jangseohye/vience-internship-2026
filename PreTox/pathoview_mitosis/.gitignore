@@ -1,0 +1,16 @@
+# 모델 가중치 — 폴더/압축 형태로 전달할 때는 models/ 에 동봉되지만,
+# git 으로 옮길 때는 74MB 바이너리를 커밋하지 않는다. (README 3장 참고)
+models/*.onnx
+
+# 데모 산출물
+*.png
+!docs/*.png
+out/
+result/
+
+# 파이썬
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/

@@ -1,0 +1,26 @@
+{
+    "job_dir": "../dataset/features",
+    "wsi_source": "../dataset/wsi",
+    "wsi_ext": [
+        ".jpg",
+        ".png",
+        ".jpeg",
+        ".scn",
+        ".dcm",
+        ".vmu",
+        ".ndpi",
+        ".tiff",
+        ".vms",
+        ".mrxs",
+        ".svs",
+        ".tif",
+        ".sdpc",
+        ".zarr",
+        ".czi"
+    ],
+    "skip_errors": false,
+    "seg_mag": 1,
+    "holes_are_tissue": true,
+    "batch_size": 64,
+    "device": "cuda:0"
+}

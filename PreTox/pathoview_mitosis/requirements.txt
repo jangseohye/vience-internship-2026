@@ -1,0 +1,40 @@
+# --- 코어 (mitosis 패키지 필수) ---------------------------------------------
+numpy
+opencv-python-headless      # detect.resize_region_to_model_input 만 사용 (headless 로 충분)
+openslide-python
+openslide-bin               # OpenSlide 네이티브 바이너리. 시스템에 libopenslide 가 있으면 생략 가능
+Pillow                      # openslide 가 의존. demo.py 오버레이 그리기에도 사용
+
+# ONNX Runtime — 원본 PathoView 의 requirements.txt / Dockerfile 어디에도 없다.
+# (배포 이미지에 수동 설치된 것으로 보임.) GPU 를 쓰려면 반드시 onnxruntime-gpu 를 설치할 것.
+# 원본 베이스 이미지는 pytorch/pytorch:2.5.0-cuda12.4-cudnn9-runtime 이므로 CUDA 12 빌드가 맞다.
+onnxruntime-gpu             # CPU 만 쓸 경우 이 줄을 지우고 onnxruntime 로 대체
+
+# --- GPU 를 쓸 때만: cuDNN 9 / CUDA 12 런타임 ---------------------------------
+# onnxruntime-gpu 는 CUDA/cuDNN 라이브러리를 함께 설치하지 않는다. 호스트에 cuDNN 9 가
+# 없으면 CUDAExecutionProvider 생성이 실패하고 **경고만 남긴 채 CPU 로 조용히 폴백**한다
+# (실측 18배 느림). 아래를 함께 설치하면 session.py 의 ort.preload_dlls() 가 site-packages
+# 에서 자동으로 찾으므로 LD_LIBRARY_PATH 설정이 필요 없다.
+# 베이스 이미지가 *-cudnn9-runtime 계열이면 이미 있으므로 생략 가능.
+nvidia-cudnn-cu12>=9,<10
+nvidia-cublas-cu12
+nvidia-cuda-runtime-cu12
+nvidia-curand-cu12
+nvidia-cufft-cu12
+
+# --- 선택: FastAPI 래퍼(mitosis/api.py)를 쓸 때만 --------------------------
+# fastapi
+# pydantic
+# uvicorn
+
+# --- 실제 GPU 추론까지 검증된 조합 (2026-08-14) -------------------------------
+#   Python 3.12.3
+#   onnxruntime-gpu        1.23.2
+#   nvidia-cudnn-cu12      9.24.0.43
+#   nvidia-cublas-cu12     12.9.2.10
+#   numpy                  2.2.6
+#   opencv-python-headless 5.0.0.93
+#   openslide-python       1.4.6  /  openslide-bin 4.0.1.2
+#   Pillow                 12.3.0
+#   호스트: NVIDIA RTX 6000 Ada, 드라이버 575.64.03, CUDA 12.9
+# 결과는 README 2장 참고.

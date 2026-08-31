@@ -1,0 +1,32 @@
+{
+    "job_dir": "../dataset/features",
+    "wsi_source": "../dataset/wsi",
+    "wsi_ext": [
+        ".png",
+        ".jpeg",
+        ".jpg",
+        ".ndpi",
+        ".svs",
+        ".tif",
+        ".mrxs",
+        ".vms",
+        ".dcm",
+        ".vmu",
+        ".scn",
+        ".tiff",
+        ".sdpc",
+        ".zarr",
+        ".czi"
+    ],
+    "skip_errors": false,
+    "target_magnification": 20.0,
+    "patch_size": 512,
+    "overlap": 0,
+    "saveto": "20x_512px_0px_overlap",
+    "visualize": true,
+    "min_tissue_proportion": 0.0,
+    "dump_patches": false,
+    "dump_patches_max": 0,
+    "dump_patches_format": "png",
+    "dump_patches_jpeg_quality": 90
+}

@@ -1,0 +1,29 @@
+{
+  "run_name": "ord_lr5e-4",
+  "args": {
+    "model": "ordinal",
+    "attn_dim": 128,
+    "epochs": 200,
+    "lr": 0.0005,
+    "reg": 0.0001,
+    "optimizer": "adam",
+    "patience": 20,
+    "standardize": true,
+    "skip_test": true,
+    "min_delta": 0.0,
+    "seed": 42,
+    "num_workers": 4,
+    "device": "cuda:0",
+    "run_name": "ord_lr5e-4"
+  },
+  "best_epoch": 2,
+  "best_val": {
+    "loss": 1.3144835773504004,
+    "acc": 0.5613207547169812,
+    "auc": 0.6272694909220362
+  },
+  "best_auc_epoch": 14,
+  "best_val_auc": 0.6593983624065503,
+  "test": null,
+  "finished_at": "2026-08-07T10:57:11"
+}

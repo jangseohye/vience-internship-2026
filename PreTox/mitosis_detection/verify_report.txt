@@ -1,0 +1,18 @@
+=== 검증 리포트 2026-08-13 14:26:43 ===
+OK   55739.svs  497 MB  (TIFF 헤더 정상)
+OK   66148.svs  1113 MB  (TIFF 헤더 정상)
+OK   66153.svs  950 MB  (TIFF 헤더 정상)
+OK   66156.svs  977 MB  (TIFF 헤더 정상)
+OK   41821.svs  881 MB  (TIFF 헤더 정상)
+OK   41824.svs  669 MB  (TIFF 헤더 정상)
+OK   41826.svs  749 MB  (TIFF 헤더 정상)
+OK   57163.svs  487 MB  (TIFF 헤더 정상)
+OK   57169.svs  500 MB  (TIFF 헤더 정상)
+OK   57180.svs  494 MB  (TIFF 헤더 정상)
+OK   36111.svs  484 MB  (TIFF 헤더 정상)
+OK   36548.svs  395 MB  (TIFF 헤더 정상)
+OK   36556.svs  416 MB  (TIFF 헤더 정상)
+OK   55658.svs  375 MB  (TIFF 헤더 정상)
+---
+정상 14 / 14,  문제 0
+총 용량: 8.8G

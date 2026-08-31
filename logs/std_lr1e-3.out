@@ -1,0 +1,44 @@
+run       : /atlantic_data/shj21/ABMIL/logs/std_lr1e-3
+device    : cuda:0
+model     : attention  L=128  params=99,330
+optim     : adam  lr=0.001  weight_decay=0.0001
+standardize: True
+slides    : train 606 / val 212 / test 202
+early stop: patience=20, min_delta=0.0
+
+epoch   1  train loss 0.7293 acc 0.5561 auc 0.5729  |  val loss 0.6729 acc 0.5991 auc 0.6235  ← best
+epoch   2  train loss 0.7224 acc 0.5710 auc 0.6017  |  val loss 0.6838 acc 0.5660 auc 0.6201  (1/20)
+epoch   3  train loss 0.7238 acc 0.5858 auc 0.6041  |  val loss 0.6899 acc 0.5566 auc 0.5911  (2/20)
+epoch   4  train loss 0.6924 acc 0.5809 auc 0.6214  |  val loss 0.7443 acc 0.5849 auc 0.5944  (3/20)
+epoch   5  train loss 0.6947 acc 0.6040 auc 0.6369  |  val loss 0.7353 acc 0.5472 auc 0.5724  (4/20)
+epoch   6  train loss 0.6864 acc 0.6073 auc 0.6442  |  val loss 0.7124 acc 0.5519 auc 0.5781  (5/20)
+epoch   7  train loss 0.6932 acc 0.5941 auc 0.6413  |  val loss 0.6611 acc 0.5943 auc 0.6446  ← best
+epoch   8  train loss 0.6839 acc 0.5924 auc 0.6486  |  val loss 0.7745 acc 0.5425 auc 0.6454  (1/20)
+epoch   9  train loss 0.6629 acc 0.6403 auc 0.6849  |  val loss 0.6874 acc 0.6038 auc 0.6324  (2/20)
+epoch  10  train loss 0.6630 acc 0.6551 auc 0.6944  |  val loss 0.7054 acc 0.6085 auc 0.6536  (3/20)
+epoch  11  train loss 0.6466 acc 0.6419 auc 0.7137  |  val loss 0.7674 acc 0.5660 auc 0.6165  (4/20)
+epoch  12  train loss 0.6429 acc 0.6502 auc 0.7237  |  val loss 0.7473 acc 0.6085 auc 0.6428  (5/20)
+epoch  13  train loss 0.6528 acc 0.6716 auc 0.7195  |  val loss 0.7293 acc 0.5896 auc 0.6352  (6/20)
+epoch  14  train loss 0.6168 acc 0.6865 auc 0.7529  |  val loss 0.7339 acc 0.5849 auc 0.6286  (7/20)
+epoch  15  train loss 0.6244 acc 0.6683 auc 0.7485  |  val loss 0.7393 acc 0.5472 auc 0.6059  (8/20)
+epoch  16  train loss 0.6103 acc 0.7294 auc 0.7757  |  val loss 0.7780 acc 0.5566 auc 0.6001  (9/20)
+epoch  17  train loss 0.5873 acc 0.7211 auc 0.7938  |  val loss 0.7721 acc 0.5660 auc 0.6302  (10/20)
+epoch  18  train loss 0.5559 acc 0.7426 auc 0.8238  |  val loss 0.8637 acc 0.5849 auc 0.6130  (11/20)
+epoch  19  train loss 0.5575 acc 0.7508 auc 0.8283  |  val loss 0.8698 acc 0.5755 auc 0.6027  (12/20)
+epoch  20  train loss 0.5132 acc 0.7657 auc 0.8544  |  val loss 0.8188 acc 0.5755 auc 0.5951  (13/20)
+epoch  21  train loss 0.5137 acc 0.7970 auc 0.8656  |  val loss 0.8412 acc 0.5755 auc 0.6019  (14/20)
+epoch  22  train loss 0.4413 acc 0.8218 auc 0.9088  |  val loss 0.9163 acc 0.5377 auc 0.5796  (15/20)
+epoch  23  train loss 0.4263 acc 0.8267 auc 0.9192  |  val loss 0.9440 acc 0.5472 auc 0.5691  (16/20)
+epoch  24  train loss 0.4105 acc 0.8581 auc 0.9340  |  val loss 0.9091 acc 0.5519 auc 0.5848  (17/20)
+epoch  25  train loss 0.3429 acc 0.8894 auc 0.9558  |  val loss 1.1041 acc 0.5755 auc 0.5792  (18/20)
+epoch  26  train loss 0.3096 acc 0.9175 auc 0.9698  |  val loss 1.2391 acc 0.5519 auc 0.5668  (19/20)
+epoch  27  train loss 0.2886 acc 0.9257 auc 0.9741  |  val loss 1.3109 acc 0.5047 auc 0.5269  (20/20)
+
+early stopping: val_loss가 20 epoch 동안 개선되지 않음
+
+best epoch 7  val loss 0.6611 acc 0.5943 auc 0.6446
+--skip-test 지정: test를 수행하지 않음
+
+기록: /atlantic_data/shj21/ABMIL/logs/std_lr1e-3/history.csv
+      /atlantic_data/shj21/ABMIL/logs/std_lr1e-3/summary.json
+      /atlantic_data/shj21/ABMIL/logs/std_lr1e-3/best.pt
